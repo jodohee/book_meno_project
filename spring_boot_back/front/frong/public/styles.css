@@ -1,0 +1,401 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ece6e1;
+    background-image: url("images/meno_back.jpg"); /*뺄까? 바꿀까?*/
+    
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+}
+
+
+/**********************************************/
+/*네비 메뉴*/
+.navbar {
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc66;
+}
+/*페이징*/
+.pagging{
+    width:1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+/*책장*/
+.bookshelf {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1000px;
+    background-color: #333;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shelf {
+    display: flex;
+    justify-content: space-around;
+    background-color: #d9d9d9;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book {
+    width: 150px;
+    height: 200px;
+    background-color: #ae9f8a;
+    border: 2px solid #614d22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #eaeaea;
+    transform: rotate(-5deg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.book:hover {
+    transform: rotate(0deg);
+}
+/*메모*/
+.memo-board {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1000px;
+    height: 80vh;
+    background-color:  #d9d9d9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 10px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+.memo {
+    width: 350px;
+    height: 350px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    background-color: #fff44f;
+    /*border: 2px solid #494949;*/
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+    user-select: none;
+    
+}
+
+.memo.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
+.memo_add{
+    color:#fff;
+    position: relative;
+    font-size: 100px;
+    top:120px;
+    left:140px;
+    cursor: pointer;
+}
+
+/*검색*/
+.search-container {
+   
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.search-container h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #ff9603;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #333333;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #d1c0a6;
+    color:#000;
+    font-weight: 700;
+}
+
+.search_list{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border:3px solid #454545;
+    background-color: #edeae3;
+}
+.search_list th{
+    border-bottom: 3px solid #454545;
+    background-color: #333;
+    color: #fff;
+}
+.search_list th,td{
+    padding:15px;
+}
+a{
+    color:#fff;
+    text-decoration: none;
+}
+
+/*상세 페이지*/
+.detail_tbl{
+    width:90%;
+    background-color: #edeae3;
+    
+    padding:20px;
+    border-radius: 0%;
+}
+.btn_style{
+    width:100px;
+    height:40px;
+    background-color: #454545;
+    color:#fff;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+/*로그인*/
+.login-container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 300px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login_btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login_btn:hover {
+    background-color: #d1c0a6;
+    color: #000;
+    font-weight: 700;
+}
+.join_text{
+    color:#454545;
+    font-size: 14px;
+}
+
+/*회원가입*/
+
+.signup-container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.signup-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.join_btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.join_btn:hover {
+    background-color: #d1c0a6;
+    color: #000;
+    font-weight: 700;
+}
+
+/*계정*/
+
+.account-board {
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 80%;
+    max-width: 1000px;
+    height: 300px;
+    background-color:  #d9d9d9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 10px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+.account {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    background-color: #beb8ab;
+    border-radius: 100%;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /*cursor: grab;
+    user-select: none;*/
+    margin: 0 auto;
+    
+}
+.account_text{
+    text-align: center;
+}
+.account_add{
+    position: relative;
+    top:55px;
+    left:63px;
+    font-size: 40px;
+    color: #fff;
+}
+.account.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
+
+/*모달창*/
+.modal{
+    width: 800px;
+    height: 800px;
+    position: relative;
+    top:-930px;
+    left:460px;
+    display: none;
+}
+.memo_datail{
+    width: 1000px;
+    height: 1000px;
+    margin-right: 50px;
+    border: 15px solid #fff;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    background-color: #fff44f;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+.div_btn_posi{
+    position:relative;
+    top:0px;
+    left:650px;
+}

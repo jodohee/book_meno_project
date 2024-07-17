@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memo Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="div_width">
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="memo.html">Memo</a></li>
+            
+            <li><a href="login.html">Login</a></li>
+            <li><a href="join.html">join</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="#option">Option</a></li>
+        </ul>
+      </nav>
+
+    <div class="memo-board">
+        <div class="memo" draggable="true" id="modal_open">Memo 1</div>
+        <div class="memo" draggable="true">Memo 2</div>
+        <div class="memo" draggable="true">Memo 3</div>
+        <div class="memo" draggable="true">Memo 4</div>
+        <div class="memo" draggable="true">
+            <span class="memo_add">+</span>
+        </div>
+    </div>
+</div>
+<!-- 모달 상세 -->
+
+<div class="modal" id="memoModal">
+    <div class="memo_datail" draggable="true">Memo 1 datail
+        <div class="div_btn_posi">
+            <button class="btn_style"type="">저장</button>
+            <button class="btn_style"type="">삭제</button>
+            <button class="btn_style"type="" id="closeButton">닫기</button>
+        </div>   
+        <div>
+                <b style="display: inline; margin-right: 50px; padding-left: 20px;">별점</b>
+                    <input type="radio" name="rank">1
+                    <input type="radio" name="rank">2
+                    <input type="radio" name="rank">3
+                    <input type="radio" name="rank">4
+                    <input type="radio" name="rank">5
+                    <input type="radio" name="rank">없음
+               
+        </div>    
+        <div style="margin:80px 20px;">
+                    메모 내용은 여기에 적기 <br>
+                    여러줄로 적어 사용<br>
+                    여기에 <br>
+                    이렇게<br>
+                    가능?<br>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- 모달 상세 -->
+<script>
+      document.getElementById('closeButton').addEventListener('click', function() {
+            document.getElementById('memoModal').style.display = 'none';
+        });
+        document.getElementById('modal_open').addEventListener('click', function() {
+            document.getElementById('memoModal').style.display = 'block';
+        });
+</script>
+
+<!--드롭 앤 드래그-->
+<script src="js/meno.js"></script>
+</body>
+</html>

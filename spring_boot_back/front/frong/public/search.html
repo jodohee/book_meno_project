@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="div_width">
+    <nav class="navbar">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="memo.html">Memo</a></li>
+          
+          <li><a href="login.html">Login</a></li>
+          <li><a href="join.html">join</a></li>
+          <li><a href="account.html">Account</a></li>
+          <li><a href="#option">Option</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-container">
+        
+        <form action="/search" method="get" class="search-form">
+            <input type="text" name="query" placeholder="Enter your search term..." class="search-input" required>
+           
+        </form>
+    </div>
+    
+    <table class="search_list">
+        <colgroup>
+            <col width="20%"/>
+            <col width="40%"/>
+            <col width="10%"/>
+            <col width="15%"/>
+            <col width="*"/>
+        </colgroup>
+        <tr>
+            <th>이미지</th>
+            <th>제목</th>
+            <th>저자</th>
+            <th>출판사</th>
+            <th>담기</th>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/정의란 무엇인가.png" style=" width:150px;height:200px;">
+            </td>
+            <td>
+                <b><font size="18px">정의란 무엇인가</font></b><br><br>
+                정의란 무엇인가에 대한 대단한 고찰을 담아어쩌구저쩌구.....
+            </td>
+            <td>지은이</td>
+            <td>거북목 출판사</td>
+            <td> <button type="submit" class="search-button">담기</button></td>
+        </tr>
+    </table>
+
+  </div>
+</body>
+</html>
